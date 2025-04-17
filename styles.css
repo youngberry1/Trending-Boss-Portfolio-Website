@@ -7,8 +7,10 @@
 
 /* Set the default font size and line height for the body */
 html {
-  font-size: 16px; /* Base font size */
-  line-height: 1.5; /* Line height for better readability */
+  font-size: 16px;
+  /* Base font size */
+  line-height: 1.5;
+  /* Line height for better readability */
 }
 
 body {
@@ -20,14 +22,31 @@ body {
 
 /* Header styles */
 header {
-  background: hwb(0 0% 100% / 0.901);
   color: #ffd700;
   padding: 10px 0;
   text-align: center;
   border-radius: 10px;
   text-shadow: #3b80ff 0px 0px 15px;
-  box-shadow: 0 5px 10px rgb(0, 0, 0);
-  font-size: large;
+  font-size: larger;
+  text-shadow: #ffd700 -9px 3px 15px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  background-color: hwb(0 0% 100% / 0.901);
+  border-radius: 10px;
+  box-shadow: #fc9f00 0px 0px 15px;
+  padding: 10px;
+}
+
+header p {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  background-color: hwb(0 0% 100% / 0.901);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: #fc9f00 0px 0px 5px;
 }
 
 /* Navigation styles */
@@ -36,7 +55,8 @@ nav {
   color: hsl(51, 100%, 50%);
   padding: 10px 0;
   text-align: center;
-  display: none; /* Hidden by default */
+  display: none;
+  /* Hidden by default */
   justify-content: center;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -47,7 +67,7 @@ nav.show {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 70px;
+  top: 110px;
   right: 20px;
   width: 200px;
 }
@@ -114,12 +134,12 @@ section p {
   color: #fc9f00;
 }
 
-#contact p > a {
+#contact p>a {
   text-decoration: none;
   color: #fc9f00;
 }
 
-#contact p > a:hover {
+#contact p>a:hover {
   text-decoration: underline;
   color: #ffd700;
 }
@@ -136,33 +156,23 @@ footer {
 
 /* Menu toggle button */
 .menu-toggle {
-  display: flex;
   flex-direction: column;
-  width: 30px;
-  height: 30px;
-  justify-content: space-evenly;
+  width: 39px;
+  height: 39px;
   position: absolute;
   top: 90px;
-  right: 55px;
+  right: 20px;
   cursor: pointer;
-  background-color: transparent;
-  z-index: 1000;
-}
-
-.menu-toggle span {
-  width: 30px;
-  border-radius: 10px;
+  background: #ffd700;
+  border-radius: 50%;
+  background: #ffd700;
+  border-radius: 50%;
+  text-align: center;
 }
 
 .menu-icon {
-  display: flex;
-  flex-direction: column;
-  width: 50px;
-  height: 30px;
-  position: absolute;
-  top: -5px;
-  right: -25px;
-  color: white;
+  font-size: 30px;
+  color: #ffffff;
 }
 
 /* Desktop-specific styles */
@@ -177,4 +187,3 @@ footer {
     display: none;
   }
 }
-

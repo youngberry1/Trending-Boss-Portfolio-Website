@@ -1,11 +1,17 @@
-const toggleButton = document.querySelector('.menu-toggle');
-const nav = document.querySelector('nav');
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector("nav");
+  const navLinks = document.querySelectorAll("nav a");
 
-// Add event listener to the toggle button
-toggleButton.addEventListener('click', () => {
-  // Toggle the 'show' class on the navigation menu
-  nav.classList.toggle('show');
+  // Toggle the menu visibility
+  menuToggle.addEventListener("click", () => {
+    nav.classList.toggle("show");
+  });
 
-  // Optionally, toggle an active state for the button (e.g., for styling)
-  toggleButton.classList.toggle('active');
+  // Hide the menu when a link is clicked
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("show");
+    });
+  });
 });
